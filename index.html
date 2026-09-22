@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Someone Special ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia, 'Times New Roman', serif;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,80,130,.18), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(160,80,255,.15), transparent 30%),
+        linear-gradient(135deg,#090014,#16001f,#07000d);
+    color:white;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+        radial-gradient(2px 2px at 10% 20%,white,transparent),
+        radial-gradient(1px 1px at 30% 70%,white,transparent),
+        radial-gradient(2px 2px at 50% 40%,white,transparent),
+        radial-gradient(1px 1px at 70% 20%,white,transparent),
+        radial-gradient(2px 2px at 90% 70%,white,transparent),
+        radial-gradient(1px 1px at 20% 90%,white,transparent),
+        radial-gradient(2px 2px at 80% 45%,white,transparent);
+    background-size:300px 300px;
+    opacity:.55;
+    pointer-events:none;
+    z-index:-2;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:70px 20px;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+}
+
+.hero-card{
+    max-width:850px;
+    width:100%;
+    padding:45px 25px;
+}
+
+.small-text{
+    color:#ffb6d2;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.big-heart{
+    font-size:70px;
+    animation:heartbeat 1.5s infinite;
+    filter:drop-shadow(0 0 25px #ff4d88);
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    15%{transform:scale(1.18)}
+    30%{transform:scale(1)}
+    45%{transform:scale(1.12)}
+}
+
+h1{
+    font-size:clamp(42px,8vw,82px);
+    line-height:1.05;
+    margin:20px 0;
+    background:linear-gradient(90deg,#fff,#ffb6d2,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero-subtitle{
+    font-size:clamp(18px,4vw,27px);
+    color:#ffd7e6;
+    line-height:1.7;
+}
+
+/* COUNTDOWN */
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin:40px 0;
+}
+
+.time-box{
+    width:95px;
+    padding:18px 10px;
+    border-radius:18px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.time-box span{
+    display:block;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.time-box small{
+    color:#ffb6d2;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    color:white;
+    font-size:16px;
+    padding:15px 28px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#ff477e,#c026d3);
+    box-shadow:0 10px 30px rgba(255,50,120,.35);
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px) scale(1.03);
+}
+
+.emotion{
+    background:rgba(255,255,255,.025);
+}
+
+.content{
+    max-width:800px;
+    text-align:center;
+}
+
+.section-title{
+    font-size:clamp(32px,6vw,55px);
+    margin-bottom:35px;
+}
+
+.emotional-text{
+    font-size:20px;
+    line-height:2;
+    color:#f7dce8;
+}
+
+.emotional-text strong{
+    color:#fff;
+}
+
+.typewriter{
+    min-height:100px;
+    font-size:clamp(24px,5vw,40px);
+    color:#ffb6d2;
+    margin-bottom:30px;
+}
+
+/* MEMORIES WITHOUT PHOTOS */
+
+.memories{
+    flex-direction:column;
+}
+
+.memory-grid{
+    max-width:1000px;
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.memory{
+    min-height:280px;
+    border-radius:25px;
+    background:
+        linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.03));
+    border:1px solid rgba(255,255,255,.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+    transition:.4s;
+}
+
+.memory:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 50px rgba(255,70,130,.18);
+}
+
+.memory-icon{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.memory h3{
+    font-size:24px;
+    margin-bottom:12px;
+}
+
+.memory p{
+    color:#e8cbd8;
+    line-height:1.7;
+}
+
+/* FINAL */
+
+.final{
+    text-align:center;
+}
+
+.final-box{
+    max-width:850px;
+}
+
+.final-title{
+    font-size:clamp(38px,7vw,65px);
+    margin-bottom:25px;
+}
+
+.final-message{
+    font-size:21px;
+    line-height:2;
+    color:#f5dce7;
+    margin-bottom:35px;
+}
+
+.surprise{
+    display:none;
+    margin-top:35px;
+    padding:35px 25px;
+    border-radius:25px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.15);
+    animation:appear 1s ease;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.surprise h2{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.surprise p{
+    font-size:20px;
+    line-height:1.9;
+    color:#f7dce8;
+}
+
+/* FLOATING HEARTS */
+
+.floating-heart{
+    position:fixed;
+    bottom:-50px;
+    pointer-events:none;
+    animation:floatUp linear forwards;
+    z-index:10;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* PETALS */
+
+.petal{
+    position:fixed;
+    top:-40px;
+    pointer-events:none;
+    animation:fall linear forwards;
+    z-index:9;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+/* CONFETTI */
+
+.confetti{
+    position:fixed;
+    top:-20px;
+    z-index:999;
+    animation:confettiFall linear forwards;
+}
+
+@keyframes confettiFall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:650px){
+
+    section{
+        padding:60px 16px;
+    }
+
+    .hero-card{
+        padding:25px 10px;
+    }
+
+    .big-heart{
+        font-size:58px;
+    }
+
+    .countdown{
+        gap:8px;
+    }
+
+    .time-box{
+        width:72px;
+        padding:13px 5px;
+    }
+
+    .time-box span{
+        font-size:25px;
+    }
+
+    .time-box small{
+        font-size:9px;
+    }
+
+    .emotional-text{
+        font-size:17px;
+        line-height:1.9;
+    }
+
+    .memory-grid{
+        grid-template-columns:1fr;
+    }
+
+    .memory{
+        min-height:250px;
+    }
+
+    .final-message{
+        font-size:18px;
+        line-height:1.9;
+    }
+
+    .surprise p{
+        font-size:17px;
+        line-height:1.8;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-card">
+
+<div class="small-text">
+A little surprise is coming...
+</div>
+
+<div class="big-heart">
+❤️
+</div>
+
+<h1>
+Something Special<br>
+Is Waiting For You
+</h1>
+
+<p class="hero-subtitle">
+Your special day is getting closer...<br>
+and my heart already has so much to say. 🥹❤️
+</p>
+
+<div class="countdown">
+
+<div class="time-box">
+<span id="days">00</span>
+<small>Days</small>
+</div>
+
+<div class="time-box">
+<span id="hours">00</span>
+<small>Hours</small>
+</div>
+
+<div class="time-box">
+<span id="minutes">00</span>
+<small>Minutes</small>
+</div>
+
+<div class="time-box">
+<span id="seconds">00</span>
+<small>Seconds</small>
+</div>
+
+</div>
+
+<button onclick="celebrate()">
+🎉 Make It Special
+</button>
+
+<div class="scroll">
+SCROLL DOWN ↓
+</div>
+
+</div>
+</section>
+
+
+<!-- FIRST EMOTIONAL MESSAGE -->
+
+<section class="emotion">
+
+<div class="content">
+
+<div class="typewriter" id="typewriter"></div>
+
+<h2 class="section-title">
+💌 Before Your Birthday...
+</h2>
+
+<div class="emotional-text">
+
+<p>
+There are some people who enter our life...
+and slowly become a part of our heart.
+</p>
+
+<br>
+
+<p>
+<strong>You are one of those people for me. ❤️</strong>
+</p>
+
+<br>
+
+<p>
+I may not always know the perfect words to express what I feel,
+but I want you to know something simple —
+<strong>your presence has made my life more meaningful.</strong>
+</p>
+
+<br>
+
+<p>
+We have had beautiful moments, silly moments,
+difficult moments, and memories that I will always carry with me.
+</p>
+
+<br>
+
+<p>
+If I could keep one thing from all the days we've spent together,
+it wouldn't be a photograph or a place...
+</p>
+
+<br>
+
+<p>
+<strong>
+It would be the feeling I get whenever I realize
+that you are a part of my life.
+</strong>
+</p>
+
+<br>
+
+<p>
+Your birthday isn't just another date on the calendar for me.
+It's a reminder that somewhere in this world,
+<strong>the person who means so much to me was born.</strong> 🥹❤️
+</p>
+
+</div>
+</div>
+</section>
+
+
+<!-- SECOND EMOTIONAL MESSAGE -->
+
+<section class="emotion">
+
+<div class="content">
+
+<h2 class="section-title">
+🥹 A Little More From My Heart
+</h2>
+
+<div class="emotional-text">
+
+<p>
+I don't know what the future has planned for us.
+</p>
+
+<br>
+
+<p>
+But I hope that when we look back years from now,
+we'll smile at how far we've come
+and remember all these little moments.
+</p>
+
+<br>
+
+<p>
+So before your special day arrives,
+I just want to say...
+</p>
+
+<br>
+
+<p><strong>Thank you for being you.</strong></p>
+
+<p>Thank you for every smile.</p>
+
+<p>Thank you for every memory.</p>
+
+<p>Thank you for every little moment.</p>
+
+<p>
+Thank you for simply being
+<strong>a beautiful part of my life.</strong>
+</p>
+
+<br>
+
+<p>
+And if I could make one wish for your birthday,
+it wouldn't be for anything expensive or extraordinary.
+</p>
+
+<br>
+
+<p>
+<strong>
+I would simply wish that life gives you the happiness you deserve,
+protects your beautiful heart,
+and gives you countless reasons to smile.
+</strong>
+</p>
+
+</div>
+</div>
+</section>
+
+
+<!-- MEMORIES WITHOUT PHOTOS -->
+
+<section class="memories">
+
+<div class="content">
+
+<h2 class="section-title">
+❤️ Little Things I Remember
+</h2>
+
+<p class="emotional-text">
+Some moments may look small to the world...
+but they can mean everything to the heart.
+</p>
+
+</div>
+
+<div class="memory-grid">
+
+<div class="memory">
+<div>
+<div class="memory-icon">🌸</div>
+<h3>That First Smile</h3>
+<p>
+Some smiles are ordinary.
+Some stay in your heart forever.
+</p>
+</div>
+</div>
+
+<div class="memory">
+<div>
+<div class="memory-icon">✨</div>
+<h3>The Little Moments</h3>
+<p>
+The smallest moments often become
+the memories we treasure the most.
+</p>
+</div>
+</div>
+
+<div class="memory">
+<div>
+<div class="memory-icon">🥹</div>
+<h3>Beautiful Memories</h3>
+<p>
+One day we may forget the exact date,
+but we'll remember how those moments felt.
+</p>
+</div>
+</div>
+
+<div class="memory">
+<div>
+<div class="memory-icon">❤️</div>
+<h3>Always Remember</h3>
+<p>
+Some memories don't need photographs.
+The heart remembers them perfectly.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- FINAL MESSAGE -->
+
+<section class="final">
+
+<div class="final-box">
+
+<div class="big-heart">
+❤️
+</div>
+
+<h2 class="final-title">
+One Last Thing...
+</h2>
+
+<p class="final-message">
+
+Before you close this little surprise,
+remember this:
+
+<br><br>
+
+You are not just a memory in my life.
+
+<br>
+
+<strong>
+You are one of the reasons some of my memories are beautiful.
+</strong>
+
+<br><br>
+
+No matter how many birthdays come and go,
+I hope you always remember that there was someone
+who was genuinely happy simply because
+<strong>you existed.</strong>
+
+<br><br>
+
+Today, tomorrow, and years from now...
+
+<br>
+
+I hope you keep that beautiful smile. ❤️
+
+<br><br>
+
+<strong>
+Your birthday is coming...
+but the real gift in my life was meeting you.
+</strong>
+
+</p>
+
+<button onclick="showSurprise()">
+🎁 Open My Final Message
+</button>
+
+<div class="surprise" id="surprise">
+
+<h2>
+🥹❤️ Happy Birthday
+</h2>
+
+<p>
+
+I hope this little website reminds you
+of how special you are.
+
+<br><br>
+
+I can't promise that every day will be perfect,
+but I can hope that your life is filled with
+beautiful moments, genuine smiles,
+peace in your heart, and dreams coming true.
+
+<br><br>
+
+May this new year of your life bring you
+everything your heart quietly wishes for.
+
+<br><br>
+
+<strong>
+Happy Birthday to someone
+who will always have a special place
+in my heart. ❤️
+</strong>
+
+<br><br>
+
+🎂✨❤️
+
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+<script>
+
+/* COUNTDOWN */
+
+const birthday =
+new Date("September 24, 2026 00:00:00").getTime();
+
+function updateCountdown(){
+
+    const now = new Date().getTime();
+    const difference = birthday - now;
+
+    if(difference <= 0){
+
+        document.getElementById("days").innerText="00";
+        document.getElementById("hours").innerText="00";
+        document.getElementById("minutes").innerText="00";
+        document.getElementById("seconds").innerText="00";
+
+        return;
+    }
+
+    const days =
+    Math.floor(difference/(1000*60*60*24));
+
+    const hours =
+    Math.floor(
+        (difference%(1000*60*60*24))/(1000*60*60)
+    );
+
+    const minutes =
+    Math.floor(
+        (difference%(1000*60*60))/(1000*60)
+    );
+
+    const seconds =
+    Math.floor(
+        (difference%(1000*60))/1000
+    );
+
+    document.getElementById("days").innerText =
+    String(days).padStart(2,"0");
+
+    document.getElementById("hours").innerText =
+    String(hours).padStart(2,"0");
+
+    document.getElementById("minutes").innerText =
+    String(minutes).padStart(2,"0");
+
+    document.getElementById("seconds").innerText =
+    String(seconds).padStart(2,"0");
+}
+
+setInterval(updateCountdown,1000);
+updateCountdown();
+
+
+/* TYPEWRITER */
+
+const text =
+"Some feelings are too deep for words... ❤️";
+
+let index=0;
+
+function typeWriter(){
+
+    if(index<text.length){
+
+        document.getElementById("typewriter")
+        .innerHTML += text.charAt(index);
+
+        index++;
+
+        setTimeout(typeWriter,70);
+    }
+}
+
+typeWriter();
+
+
+/* FLOATING HEARTS */
+
+function createHeart(){
+
+    const heart=document.createElement("div");
+
+    heart.className="floating-heart";
+
+    const hearts=[
+        "❤️","💕","💗","💖","💓","💞","🤍"
+    ];
+
+    heart.innerText=
+    hearts[Math.floor(Math.random()*hearts.length)];
+
+    heart.style.left=
+    Math.random()*100+"vw";
+
+    heart.style.fontSize=
+    Math.random()*20+15+"px";
+
+    heart.style.animationDuration=
+    Math.random()*5+5+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },10000);
+}
+
+setInterval(createHeart,800);
+
+
+/* FALLING PETALS */
+
+function createPetal(){
+
+    const petal=document.createElement("div");
+
+    petal.className="petal";
+
+    petal.innerText="🌸";
+
+    petal.style.left=
+    Math.random()*100+"vw";
+
+    petal.style.fontSize=
+    Math.random()*15+12+"px";
+
+    petal.style.animationDuration=
+    Math.random()*5+5+"s";
+
+    document.body.appendChild(petal);
+
+    setTimeout(()=>{
+        petal.remove();
+    },10000);
+}
+
+setInterval(createPetal,1200);
+
+
+/* CONFETTI */
+
+function celebrate(){
+
+    const symbols=[
+        "🎉","✨","❤️","💕","🌸","⭐","🎊"
+    ];
+
+    for(let i=0;i<100;i++){
+
+        const confetti=
+        document.createElement("div");
+
+        confetti.className="confetti";
+
+        confetti.innerText=
+        symbols[
+            Math.floor(Math.random()*symbols.length)
+        ];
+
+        confetti.style.left=
+        Math.random()*100+"vw";
+
+        confetti.style.fontSize=
+        Math.random()*20+10+"px";
+
+        confetti.style.animationDuration=
+        Math.random()*3+2+"s";
+
+        confetti.style.animationDelay=
+        Math.random()*1.5+"s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(()=>{
+            confetti.remove();
+        },6000);
+    }
+}
+
+
+/* FINAL SURPRISE */
+
+function showSurprise(){
+
+    const surprise=
+    document.getElementById("surprise");
+
+    surprise.style.display="block";
+
+    surprise.scrollIntoView({
+        behavior:"smooth"
+    });
+
+    celebrate();
+}
+
+</script>
+
+</body>
+</html>
